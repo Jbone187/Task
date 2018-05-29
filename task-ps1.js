@@ -5,7 +5,7 @@ const moment = require('moment');
 const time = () => moment().format('YYYY-MM-DD hh:mm:ss').trim();
 
 
-winston.add(winston.transports.File, { filename: 'NodeShell.log', timestamp: time });
+winston.add(winston.transports.File, { filename: 'taskps1.log', timestamp: time });
 //Task Scheduler
 cron.schedule('0 * * * *', function () {
 
@@ -14,7 +14,7 @@ let ps = new shell({
   noProfile: true
 });
 //Run PowerShell Script
-ps.addCommand('h:\Out-EmployeeDirectory.ps1')
+ps.addCommand('Add ps1')
 
 ps.invoke()
 .then(output => {
