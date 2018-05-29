@@ -1,2 +1,2 @@
 # Task
-A task scheduler that run's .bat files "Just a combination of two modules "
+A task scheduler that run's .ps1 files and logs processes
