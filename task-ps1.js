@@ -7,7 +7,7 @@ const time = () => moment().format('YYYY-MM-DD hh:mm:ss').trim();
 
 winston.add(winston.transports.File, { filename: 'taskps1.log', timestamp: time });
 //Task Scheduler
-cron.schedule('0 * * * *', function () {
+cron.schedule('* * * * *', function () {
 
 let ps = new shell({
   executionPolicy: 'Bypass',
